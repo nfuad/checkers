@@ -1,0 +1,19 @@
+{
+  "name": "checkers",
+  "version": "0.0.0",
+  "description": "A simple checkers game made with React and Next.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfuad/checkers.git"
+  },
+  "author": "Nafis Fuad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nfuad/checkers/issues"
+  },
+  "homepage": "https://github.com/nfuad/checkers#readme"
+}
