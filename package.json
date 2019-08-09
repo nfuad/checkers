@@ -4,7 +4,11 @@
   "description": "A simple checkers game made with React and Next.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next -H 192.168.0.105 -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "now deploy --target production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/nfuad/checkers/issues"
   },
-  "homepage": "https://github.com/nfuad/checkers#readme"
+  "homepage": "https://github.com/nfuad/checkers#readme",
+  "dependencies": {
+    "next": "^9.0.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
 }
