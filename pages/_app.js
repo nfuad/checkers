@@ -1,27 +1,23 @@
-import React from "react";
-import App, { Container } from "next/app";
-
-// custom head
-import Head from "../components/Head";
+import React from 'react'
+import App, { Container } from 'next/app'
 
 // custom import
-import Layout from "../components/Layout";
-import Menu from "../components/Menu";
-import Footer from "../components/Footer";
+import Head from '../components/Head'
+import Layout from '../components/Layout'
+import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
-class MyApp extends App {
+class CheckersApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
+    let pageProps = {}
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps(ctx)
     }
-
-    return { pageProps };
+    return { pageProps }
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
     return (
       <Container>
         <Head title="Checkers" />
@@ -30,11 +26,9 @@ class MyApp extends App {
           <Component {...pageProps} key="page-transition-key" />
           <Footer />
         </Layout>
-
-        <style jsx global>{``}</style>
       </Container>
-    );
+    )
   }
 }
 
-export default MyApp;
+export default CheckersApp
