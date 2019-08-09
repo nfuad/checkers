@@ -2,7 +2,6 @@
   "name": "checkers",
   "version": "0.0.0",
   "description": "A simple checkers game made with React and Next.js",
-  "main": "index.js",
   "scripts": {
     "dev": "next -H 192.168.0.105 -p 3000",
     "build": "next build",
@@ -22,7 +21,9 @@
   "homepage": "https://github.com/nfuad/checkers#readme",
   "dependencies": {
     "next": "^9.0.3",
+    "next-page-transitions": "^1.0.0-beta.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-reveal": "^1.2.2"
   }
 }
