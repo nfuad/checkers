@@ -9,17 +9,30 @@ const Layout = props => {
             margin: 0;
           }
 
-          .board {
-            transform: rotate(90deg);
-            border: 15px double red;
-            border-radius: 25px;
-            padding: 20px;
+          .wrapper {
+            margin: 0 auto;
+            width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            overflow-x: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
           }
 
           a {
             text-decoration: none;
             transition: border-bottom 0.3s;
-            font-size: 20px;
+          }
+
+          .board {
+            transform: rotate(90deg);
+            border: 15px solid #111;
+            border-radius: 25px;
+            padding: 20px;
           }
 
           // a:visited {
