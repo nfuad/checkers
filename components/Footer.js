@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { Fade } from 'react-reveal'
 
 const Footer = () => (
-  <div>
+  <Fade bottom>
     <p>
       Designed &amp; Developed with{' '}
       <span className="icon">
@@ -16,7 +17,8 @@ const Footer = () => (
 
     <style jsx>{`
       p {
-        font-size: 18px;
+        text-align: center;
+        opacity: 0; // keep initial opacity to zero for fade in animation
       }
 
       p > span.icon {
@@ -38,7 +40,7 @@ const Footer = () => (
         }
       }
     `}</style>
-  </div>
+  </Fade>
 )
 
 export default Footer
