@@ -1,11 +1,10 @@
+import { Fade } from 'react-reveal'
 import Checkerboard from '../components/Checkerboard'
-import GithubCorner from '../components/GithubCorner'
 
 const Page = () => (
-  <div>
-    <GithubCorner />
-    <Checkerboard dimensions={12} />
-  </div>
+  <Fade>
+    <Checkerboard dimensions={8} />
+  </Fade>
 )
 
 export default Page
