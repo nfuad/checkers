@@ -1,4 +1,8 @@
-import Fade from 'react-reveal/Fade'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
+import { Fade } from 'react-reveal'
+import Link from 'next/link'
 
 class Menu extends React.Component {
   state = { toggle: false }
@@ -12,20 +16,34 @@ class Menu extends React.Component {
       <Fade left>
         <div className="menu">
           <div className="toggler" onClick={this.handleClick}>
-            {this.state.toggle === false ? <span>|||</span> : <span>X</span>}
+            {this.state.toggle === false ? (
+              <span>
+                <FontAwesomeIcon icon={faBars} />
+              </span>
+            ) : (
+              <span>
+                <FontAwesomeIcon icon={faTimes} />
+              </span>
+            )}
           </div>
 
           {this.state.toggle && (
             <Fade cascade top>
               <ul>
                 <li>
-                  <a href="/">item</a>
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/">item</a>
+                  <Link href="/checkers">
+                    <a>Checkers</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/">item</a>
+                  <Link href="/learn">
+                    <a>Learn</a>
+                  </Link>
                 </li>
               </ul>
             </Fade>
@@ -37,7 +55,6 @@ class Menu extends React.Component {
               width: 100%;
             }
             .toggler {
-              transform: rotate(-90deg);
               font-size: 40px;
               font-weight: 700;
               line-height: 1;
@@ -50,7 +67,7 @@ class Menu extends React.Component {
               padding: 15px;
             }
             .toggler:hover {
-              transform: rotate(-90deg) scale(1.1);
+              transform: scale(1.1);
               cursor: pointer;
             }
             ul {
