@@ -1,11 +1,12 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 
-// custom import
+// import custom components
 import Head from '../components/Head'
 import Layout from '../components/Layout'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
+import GithubCorner from '../components/GithubCorner'
 
 class CheckersApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,6 +24,7 @@ class CheckersApp extends App {
         <Head title="Checkers" />
         <Layout>
           <Menu />
+          <GithubCorner />
           <Component {...pageProps} key="page-transition-key" />
           <Footer />
         </Layout>
