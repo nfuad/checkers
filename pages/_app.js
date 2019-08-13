@@ -25,7 +25,7 @@ class CheckersApp extends App {
         <Layout>
           <Menu />
           <GithubCorner />
-          <Component {...pageProps} key="page-transition-key" />
+          <Component {...pageProps} />
           <Footer />
         </Layout>
       </Container>
