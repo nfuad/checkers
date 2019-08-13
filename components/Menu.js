@@ -55,9 +55,6 @@ class Menu extends React.Component {
               width: 100%;
             }
             .toggler {
-              font-size: 40px;
-              font-weight: 700;
-              line-height: 1;
               display: inline-block;
               transition: transform 0.2s;
               margin: 20px;
@@ -80,6 +77,44 @@ class Menu extends React.Component {
             }
             ul li {
               list-style-type: none;
+            }
+
+            @media only screen and (max-width: 1300px) {
+              .toggler {
+                transform: scale(0.9);
+              }
+
+              .toggler:hover {
+                transform: scale(1);
+                cursor: pointer;
+              }
+            }
+            @media only screen and (max-width: 1000px) {
+              .toggler {
+                transform: scale(0.8);
+                margin: 10px 20px 10px 20px;
+              }
+              .toggler:hover {
+                transform: scale(0.9);
+                cursor: pointer;
+              }
+            }
+            @media only screen and (max-width: 600px) {
+              ul {
+                width: 80%;
+              }
+            }
+            @media only screen and (max-width: 500px) {
+              .toggler {
+                transform: scale(0.7);
+              }
+              .toggler:hover {
+                transform: scale(0.8);
+                cursor: pointer;
+              }
+              ul {
+                width: 70%;
+              }
             }
           `}</style>
         </div>
