@@ -9,8 +9,6 @@ const GithubCorner = () => (
         aria-label="View source on GitHub"
       >
         <svg
-          width="80"
-          height="80"
           viewBox="0 0 250 250"
           style={{
             fill: '#151513',
@@ -41,6 +39,12 @@ const GithubCorner = () => (
         .github-corner {
           opacity: 0; // set opacity 0 for fade animation
         }
+
+        .github-corner svg {
+          width: 80px;
+          height: 80px;
+        }
+
         .github-corner:hover .octo-arm {
           animation: octocat-wave 560ms ease-in-out;
         }
@@ -58,12 +62,25 @@ const GithubCorner = () => (
             transform: rotate(10deg);
           }
         }
+
+        @media only screen and (max-width: 1000px) {
+          .github-corner svg {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
         @media (max-width: 500px) {
           .github-corner:hover .octo-arm {
             animation: none;
           }
           .github-corner .octo-arm {
             animation: octocat-wave 560ms ease-in-out;
+          }
+
+          .github-corner svg {
+            width: 50px;
+            height: 50px;
           }
         }
       `}</style>
