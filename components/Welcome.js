@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Fade } from 'react-reveal'
 import Rules from '../components/Rules'
+import Options from '../components/Options'
 
 const Welcome = () => (
   <div className="wrapper">
@@ -22,9 +23,7 @@ const Welcome = () => (
 
     <Fade top>
       <div className="actions">
-        <Link href="/checkers">
-          <button className="cta-button">Get Started</button>
-        </Link>
+        <Options />
         <Link href="/learn">
           <button className="cta-button">Learn More</button>
         </Link>
@@ -32,29 +31,6 @@ const Welcome = () => (
     </Fade>
 
     <style jsx>{`
-      h1,
-      h3 {
-        text-transform: capitalize;
-      }
-
-      .cta-button {
-        background: #f8f8f8;
-        border: #111;
-        padding: 15px 35px 15px 35px;
-        font-size: 16x;
-        border: 2px solid #111;
-        cursor: pointer;
-        margin-right: 35px;
-        transition: background 0.2s, color 0.3s;
-      }
-      .cta-button:nth-child(2) {
-        margin-right: 0;
-      }
-
-      .cta-button:hover {
-        background: #111;
-        color: #f8f8f8;
-      }
       h1,
       h3,
       p {
