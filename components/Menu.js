@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-
 import { Fade } from 'react-reveal'
 import Link from 'next/link'
 
@@ -79,7 +78,7 @@ class Menu extends React.Component {
               list-style-type: none;
             }
 
-            @media only screen and (max-width: 1300px) {
+            @media (max-width: 1300px) {
               .toggler {
                 transform: scale(0.9);
               }
@@ -89,7 +88,7 @@ class Menu extends React.Component {
                 cursor: pointer;
               }
             }
-            @media only screen and (max-width: 1000px) {
+            @media (max-width: 1000px) {
               .toggler {
                 transform: scale(0.8);
                 margin: 10px 20px 10px 20px;
@@ -99,12 +98,12 @@ class Menu extends React.Component {
                 cursor: pointer;
               }
             }
-            @media only screen and (max-width: 600px) {
+            @media (max-width: 600px) {
               ul {
                 width: 80%;
               }
             }
-            @media only screen and (max-width: 500px) {
+            @media (max-width: 500px) {
               .toggler {
                 transform: scale(0.7);
               }
