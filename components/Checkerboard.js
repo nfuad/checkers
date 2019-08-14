@@ -1,21 +1,21 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'
-import useCheckers from '../hooks/useCheckers'
 
+// import emotion core for styling
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 
+// import the custom checker hook
+import useCheckers from '../hooks/useCheckers'
+
+// import necessary components
 import Player from './Player'
 import Square from './Square'
 import PlayerTurn from './PlayerTurn'
+
+// import styles
 import { checkerboard, checkerboardRow } from './styles'
 
-function Checkerboard({
-  dimensions,
-
-  styles = {},
-  playerColors = {},
-}) {
+function Checkerboard({ dimensions, styles = {}, playerColors = {} }) {
   const { board, handleMove, handlePick, playerTurn, scoreboard } = useCheckers(
     dimensions
   )

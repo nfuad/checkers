@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types'
 
+// import emotion core for styling
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 
+// import custom components
 import Checker from './Checker'
+
+// import custom styles
 import {
   playerScoreboard,
   playerName,
@@ -12,7 +16,9 @@ import {
 } from './styles'
 
 function Player({ player, playerTurn, scoreboard, styles, playerColors }) {
+  // get the colors for each player from the playerColors
   const { player1, player2 } = playerColors
+  // if nothing is provided, go with default
   const color = player === 1 ? player1 || '#111' : player2 || '#ed4747'
 
   return (
@@ -26,10 +32,10 @@ function Player({ player, playerTurn, scoreboard, styles, playerColors }) {
       >
         <h1
           css={{
-            '@media(max-width: 800px)': {
+            '@media (max-width: 800px)': {
               fontSize: 22,
             },
-            '@media(max-width: 500px)': {
+            '@media (max-width: 500px)': {
               fontSize: 18,
             },
           }}

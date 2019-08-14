@@ -1,5 +1,7 @@
+// import built in react hooks
 import { useReducer, useEffect } from 'react'
 
+// import the reducer
 import reducer from '../state/reducer'
 import {
   swapTurns,
@@ -7,7 +9,6 @@ import {
   decrementScoreboard,
   setActiveSquare,
   setIsMultiJump,
-  incrementMovesMade,
   resetMovesMade,
   setPositions,
 } from '../state/actions'
@@ -15,8 +16,10 @@ import CheckersEngine from '../engines/checkers'
 import generatePositions from '../helpers/generatePositions'
 import createBoard from '../helpers/createBoard'
 
+// Initialize the game engine
 const engine = new CheckersEngine()
 
+// the checkers custom hook
 function useCheckers(dims) {
   const dimensions = dims || 8
   const initialState = {
@@ -68,6 +71,7 @@ function useCheckers(dims) {
     }
   })
 
+  // handle the picking of each checker
   const handlePick = square => {
     const { occupiedBy } = square
     if (occupiedBy === playerTurn) {
@@ -76,6 +80,7 @@ function useCheckers(dims) {
     }
   }
 
+  // handle each move with appropriate checking
   const handleMove = square => {
     if (activeSquare) {
       const jumpedSquare =

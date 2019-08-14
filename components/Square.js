@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types'
 
+// import emotion core for styling
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 
+// import custom components
 import Checker from './Checker'
 
+// import custom styles
 import { boardSquare } from './styles'
 
 function Square({
   square,
   square: {
     position: { x, y },
-    occupiedBy
+    occupiedBy,
   },
   handlePick,
   handleMove,
   styles,
-  playerColors
+  playerColors,
 }) {
   const isEvenPosition = (x + 1 * y) % 2 === 0
 
@@ -47,7 +50,7 @@ Square.propTypes = {
   handlePick: PropTypes.func.isRequired,
   handleMove: PropTypes.func.isRequired,
   styles: PropTypes.object,
-  playerColors: PropTypes.object
+  playerColors: PropTypes.object,
 }
 
 export default Square

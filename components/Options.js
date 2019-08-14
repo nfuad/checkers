@@ -2,7 +2,8 @@ import Modal from 'react-modal'
 import Fade from 'react-reveal/Fade'
 import Router from 'next/router'
 
-const customStyles = {
+// Custom styles for the modal
+const modalStyles = {
   content: {
     top: '50%',
     left: '50%',
@@ -29,21 +30,28 @@ class Options extends React.Component {
     this.setState({ modalIsOpen: false })
   }
 
+  // handle click for the continue button
   handleClick = () => {
+    // set the configuration in the localstorage
     localStorage.setItem('dimensions', this.state.dimensions)
     localStorage.setItem('color1', this.state.color1)
     localStorage.setItem('color2', this.state.color2)
+    // continue to checkers page
     Router.push('/checkers')
   }
 
+  // handle board dimension change
   handleDimensionChange = event => {
+    // use parseInt to make sure the data is of type number
     this.setState({ dimensions: parseInt(event.target.value) })
   }
 
+  // handle color change for player 1
   handleColor1Change = event => {
     this.setState({ color1: event.target.value })
   }
 
+  // handle color change for player 2
   handleColor2Change = event => {
     this.setState({ color2: event.target.value })
   }
@@ -58,7 +66,7 @@ class Options extends React.Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
+          style={modalStyles}
           contentLabel="Choose Options"
         >
           <Fade>

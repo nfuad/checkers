@@ -56,18 +56,18 @@ const Rules = () => (
         margin-bottom: 15px;
       }
 
-      @media only screen and (max-width: 1000px) {
+      @media (max-width: 1000px) {
         ul {
           width: 65%;
         }
       }
-      @media only screen and (max-width: 800px) {
+      @media (max-width: 800px) {
         ul {
           width: 70%;
         }
       }
 
-      @media only screen and (max-width: 500px) {
+      @media (max-width: 500px) {
         ul {
           width: 80%;
         }

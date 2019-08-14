@@ -1,6 +1,8 @@
 import replaceAt from '../helpers/replaceAt'
 
+// Checkers game logic engine class
 class CheckersEngine {
+  // check if the checker became a king, return a boolean value
   didBecomeKing(activeSquare, square, dimensions) {
     const {
       position: { y },
@@ -12,6 +14,7 @@ class CheckersEngine {
     )
   }
 
+  // check if the checker jumped, return a boolean value
   didJump(activeSquare, square) {
     const {
       position: { x: newX, y: newY },
@@ -23,6 +26,7 @@ class CheckersEngine {
     return Math.abs(newX - x) === 2 && Math.abs(newY - y) === 2
   }
 
+  // check if the move is valid, return a boolean value
   checkValidMove(
     activeSquare,
     square,
@@ -54,6 +58,7 @@ class CheckersEngine {
     }
   }
 
+  // get the position of the square on which the checker jumped
   getJumpedSquare(activeSquare, square, positions) {
     const {
       position: { x: activeX, y: activeY },
@@ -68,6 +73,7 @@ class CheckersEngine {
     )
   }
 
+  // get the new positions
   getNewPositions(activeSquare, square, positions, becameKing) {
     const oldSquare = {
       ...activeSquare,
@@ -96,6 +102,7 @@ class CheckersEngine {
     return replaceAt(withOld, newIndex, newSquare)
   }
 
+  // get the possible positions and return coordinates
   getPossiblePositions(activeSquare) {
     const {
       position: { x, y },

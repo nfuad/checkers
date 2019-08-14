@@ -87,7 +87,7 @@ const Layout = props => {
             color: #f8f8f8;
           }
 
-          @media only screen and (max-width: 1000px) {
+          @media (max-width: 1000px) {
             .wrapper p,
             .wrapper h1 {
               max-width: 65%;
@@ -101,7 +101,7 @@ const Layout = props => {
               padding: 15px;
             }
           }
-          @media only screen and (max-width: 800px) {
+          @media (max-width: 800px) {
             .wrapper p,
             .wrapper h1 {
               max-width: 70%;
@@ -116,7 +116,7 @@ const Layout = props => {
             }
           }
 
-          @media only screen and (max-width: 500px) {
+          @media (max-width: 500px) {
             .wrapper p,
             .wrapper h1 {
               max-width: 80%;

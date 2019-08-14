@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { Fade } from 'react-reveal'
+
+// import custom components
 import Rules from '../components/Rules'
 import Options from '../components/Options'
 

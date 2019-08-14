@@ -19,7 +19,8 @@ const Footer = () => (
       </a>
       <br />
       <span className="copyleft">&copy;</span> Copyleft. No Rights Reserved.{' '}
-      {new Date().getFullYear()}
+      {// Always get the current year automatically
+      new Date().getFullYear()}
     </p>
 
     <style jsx>{`
@@ -52,10 +53,13 @@ const Footer = () => (
 
       .copyleft {
         display: inline-block;
-        transform: rotate(180deg);
+        transform: rotate(
+          180deg
+        ); // rotate the copyright symbol by 180 degrees to get the copyleft one
         font-size: 16px;
       }
 
+      // Add pulse animation to the heart icon specifically
       @keyframes pulse {
         0% {
           transform: scale(1.1);
@@ -68,7 +72,7 @@ const Footer = () => (
         }
       }
 
-      @media only screen and (max-width: 500px) {
+      @media (max-width: 500px) {
         p,
         a,
         span {

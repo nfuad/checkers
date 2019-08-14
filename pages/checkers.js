@@ -11,6 +11,7 @@ class Page extends React.Component {
   render() {
     return (
       <Fade>
+        {/* Only show the checkers board when fully mounted, otherwise show a loader */}
         {this.state.mounted === false ? (
           <div className="loading">
             <h1>Loading...</h1>

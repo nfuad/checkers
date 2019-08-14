@@ -1,3 +1,4 @@
+// set actions in constants to avoid typos
 export const SWAP_TURNS = 'SWAP_TURNS'
 export const INCREMENT_SCOREBOARD = 'INCREMENT_SCOREBOARD'
 export const DECREMENT_SCOREBOARD = 'DECREMENT_SCOREBOARD'

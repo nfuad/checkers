@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 
 const PlayerTurn = props => (
   <div>
+    {/* Show player Turn */}
     <h2>player {props.playerTurn === 1 ? "One's" : "Two's"} turn</h2>
 
     <style jsx>{`
@@ -9,6 +10,7 @@ const PlayerTurn = props => (
         text-align: center;
       }
       h2 {
+        // Keep changing background based on turns
         background: ${props.playerTurn === 1
           ? props.playerColors.player1
           : '#111'};
@@ -20,7 +22,7 @@ const PlayerTurn = props => (
         border-top-right-radius: 15px;
       }
 
-      @media only screen and (max-width: 800px) {
+      @media (max-width: 800px) {
         h2 {
           font-size: 20px;
           border-top-left-radius: 10px;
@@ -28,13 +30,13 @@ const PlayerTurn = props => (
           margin-top: 20px;
         }
       }
-      @media only screen and (max-width: 700px) {
+      @media (max-width: 700px) {
         h2 {
           font-size: 18px;
           border-radius: 5px;
         }
       }
-      @media only screen and (max-width: 650px) {
+      @media (max-width: 650px) {
         h2 {
           font-size: 15px;
           border-radius: 5px;

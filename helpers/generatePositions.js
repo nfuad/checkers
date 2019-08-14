@@ -1,3 +1,4 @@
+// generate possible positions given the specific dimensions
 export default function generatePositions(dimensions) {
   const blankArray = [...Array(dimensions)]
   const squares = blankArray.reduce((acc, _, i) => {
@@ -6,7 +7,7 @@ export default function generatePositions(dimensions) {
       const square = {
         position,
         occupiedBy: j < 3 ? 1 : j > dimensions - 4 ? 2 : null,
-        isKinged: false
+        isKinged: false,
       }
 
       acc.push(square)

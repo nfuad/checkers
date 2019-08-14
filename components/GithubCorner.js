@@ -1,4 +1,4 @@
-import Fade from 'react-reveal/Fade'
+import { Fade } from 'react-reveal'
 
 const GithubCorner = () => (
   <Fade cascade right>
@@ -48,6 +48,8 @@ const GithubCorner = () => (
         .github-corner:hover .octo-arm {
           animation: octocat-wave 560ms ease-in-out;
         }
+
+        // set animation on hover
         @keyframes octocat-wave {
           0%,
           100% {
@@ -63,7 +65,7 @@ const GithubCorner = () => (
           }
         }
 
-        @media only screen and (max-width: 1000px) {
+        @media (max-width: 1000px) {
           .github-corner svg {
             width: 60px;
             height: 60px;
