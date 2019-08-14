@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChessKing } from '@fortawesome/free-solid-svg-icons'
-
 import PropTypes from 'prop-types'
 
+// import emotion core for styling
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 
+// import styles
 import { regularChecker, kingedChecker } from './styles'
 
 function Checker({
@@ -17,7 +18,9 @@ function Checker({
   styles,
   playerColors,
 }) {
+  // get the colors of each player
   const { player1, player2 } = playerColors
+  // if the color is provided then use that, otherwise, use the defaults
   const color = occupiedBy
     ? occupiedBy === 1
       ? player1 || 'white'
@@ -41,7 +44,13 @@ function Checker({
       data-testid={label && label}
       onClick={handlePick ? () => handlePick(square) : null}
     >
-      {isKinged && <FontAwesomeIcon icon={faChessKing} />}
+      {isKinged && (
+        // when kinged, use the king icon in the checker
+        <FontAwesomeIcon
+          style={{ width: '60%', height: '60%' }}
+          icon={faChessKing}
+        />
+      )}
     </div>
   )
 }
