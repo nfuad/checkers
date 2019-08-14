@@ -1,10 +1,14 @@
+// Viewports for devices
 const breakpoints = {
   small: 700,
   smaller: 500,
   smallest: 400,
 }
+
+// Helper function for media queries
 const mq = bp => `@media (max-width: ${breakpoints[bp]}px)`
 
+// styles for whole chekerboard
 const checkerboard = {
   display: 'flex',
   flexWrap: 'wrap',
@@ -15,10 +19,12 @@ const checkerboard = {
   },
 }
 
+// styles for each row
 const checkerboardRow = {
   display: 'flex',
 }
 
+// styles for individual board square
 const boardSquare = isEvenPosition => ({
   display: 'flex',
   justifyContent: 'center',
@@ -40,6 +46,7 @@ const boardSquare = isEvenPosition => ({
   },
 })
 
+// styles for ordinary checker
 const regularChecker = color => ({
   height: 45,
   width: 45,
@@ -60,6 +67,7 @@ const regularChecker = color => ({
   },
 })
 
+// styles for a kinged checker
 const kingedChecker = color => ({
   cursor: 'pointer',
   display: 'flex',
@@ -92,6 +100,7 @@ const kingedChecker = color => ({
   },
 })
 
+// styles for the players' scoreboard
 const playerScoreboard = {
   display: 'flex',
   flexDirection: 'column',
@@ -103,6 +112,7 @@ const playerScoreboard = {
   },
 }
 
+// styling for the players' names
 const playerName = (playerTurn, player, color) => ({
   display: 'flex',
   justifyContent: 'center',
@@ -136,6 +146,7 @@ const playerName = (playerTurn, player, color) => ({
   },
 })
 
+// styles for the players' score
 const playerScore = {
   display: 'flex',
   width: 80,
@@ -149,10 +160,12 @@ const playerScore = {
   },
 }
 
+// styles for the players' captured checker
 const capturedChecker = {
   marginBottom: '5px',
   width: 30,
   height: 30,
+  border: '2px solid #111',
   [mq('small')]: {
     height: 20,
     width: 20,
