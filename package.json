@@ -33,7 +33,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "next": "^9.0.3",
+    "next": "^9.3.5",
     "next-page-transitions": "^1.0.0-beta.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
