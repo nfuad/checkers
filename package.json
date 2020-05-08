@@ -37,7 +37,7 @@
     "next-page-transitions": "^1.0.0-beta.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-modal": "^3.9.1",
+    "react-modal": "^3.11.2",
     "react-reveal": "^1.2.2"
   },
   "engines": {
